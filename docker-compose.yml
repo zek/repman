@@ -81,7 +81,7 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: $PWD/docker/nginx/scripts
+      device: ./docker/nginx/scripts
       o: bind
   docker-nginx-ssl-certs:
     driver: local
