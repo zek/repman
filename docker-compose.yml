@@ -61,42 +61,49 @@ services:
 volumes:
   app-var:
     driver: local
+    external: true
     driver_opts:
       type: none
       device: $PWD/var
       o: bind
   app-public:
     driver: local
+    external: true
     driver_opts:
       type: none
       device: $PWD/public
       o: bind
   docker-logs-nginx:
     driver: local
+    external: true
     driver_opts:
       type: none
       device: $PWD/docker/logs/nginx
       o: bind
   docker-nginx-scripts:
     driver: local
+    external: true
     driver_opts:
       type: none
       device: ./docker/nginx/scripts
       o: bind
   docker-nginx-ssl-certs:
     driver: local
+    external: true
     driver_opts:
       type: none
       device: $PWD/docker/nginx/ssl/certs
       o: bind
   docker-nginx-ssl-private:
     driver: local
+    external: true
     driver_opts:
       type: none
       device: $PWD/docker/nginx/ssl/private
       o: bind
   docker-crontabs:
     driver: local
+    external: true
     driver_opts:
       type: none
       device: $PWD/docker/crontabs
